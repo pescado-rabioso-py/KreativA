@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS-->
+        <link href="{% static 'assets/css/styles.css' %}" rel="stylesheet">
+        <!-- ICONS-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <title>KreativA</title>
+    </head>
+    <body>
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">{{ home.name }}</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Incio</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">¿Quienes somos?</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">¿Que hacemos?</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Nuestros trabajos</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-menu"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!-- HOME -->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <h1 class="home__title"><span>{{ home.greetings_1 }}</span><br>{{ home.greetings_2 }}</h1>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-link"><i class="bx bx-up-arrow-alt"></i>Deslizame</a>
+                    </div>
+
+                    <img src="{{ home.picture.url }}" alt="" class="home__img">
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section class="about section" id="about">
+                <h2 class="section-title">¿Quienes somos?</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="{{ about.profile_img.url }}" alt="">
+                    </div>
+
+                    <div>
+                        <h2 class="about__subtitle">{{ about.heading }}</h2>
+                        <span class="about__profession">{{ about.career }}</span>
+                        <p class="about__text">{{ about.description }}</p>
+
+                        <div class="about__social">
+
+                            {% for profile in about.profile_set.all %}
+                                <a href="{{ profile.link}}" class="about__social-icon">
+                                    <i class="bx bxl-{{ profile.social_name }}"></i>
+                                </a>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">¿Que hacemos?</h2>
+
+                <div class="skills__container bd-grid">
+                    <div class="skills__box">
+                        {% for category in categories %}
+                        <h3 class="skills__subtitle">{{category.name}}</h3>
+                            {% for skills in category.skills_set.all %}
+                        
+                                <span class="skills__name">{{skills.skill_name}}</span>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+
+                    <div class="skills__img">
+                        <img src="{% static 'assets/img/skill.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- PORTFOLIO-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">Nuestros trabajos</h2>
+                <div class="portfolio__container bd-grid">
+                    {% for portfolio in portfolios %}
+                    <div class="portfolio__img">
+                        <img src="{{ portfolio.image.url }}" alt="">
+                        <div class="portfolio__link">
+                            <a href="{{ portfolio.link }}" class="portfolio__link-name">Ver detalles</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- CONTACT-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contactos</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">Email</h3>
+                        <span class="contact__text">info@kreativa.com.py</span>
+                    </div>
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">Teléfono</h3>
+                        <span class="contact__text">+595986104890</span>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <input placeholder="Name" type="text" class="contact__input">
+                            <input type="mail" placeholder="Email" class="contact__input">
+                        </div>
+    
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+    
+                        <input type="submit" value="Enviar" class="contact__button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">KreativA</h2>
+                    <p class="footer__text">Somos KreativA y estamos para rediseñar tus espacios</p>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">Explora</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Inicio</a></li>
+                        <li><a href="#about" class="footer__link">¿Quienes somos?</a></li>
+                        <li><a href="#skills" class="footer__link">¿Que hacemos?</a></li>
+                        <li><a href="#portfolio" class="footer__link">Nuestros trabajos</a></li>
+                        <li><a href="#contact" class="footer__link">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">Siguenos</h2>
+                    <a href="#" class="footer__social"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="footer__social"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="footer__social"><i class="bx bxl-twitter"></i></a>
+                    <div class="footer_text">
+                        <h6 class="text-center small text-muted">Copyright &copy; KreativA {% now "Y" %}</h6>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- SCROLL REVEAL -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!-- MAIN JS-->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+    </body>
+</html>

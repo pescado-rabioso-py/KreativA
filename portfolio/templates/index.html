@@ -15,6 +15,10 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
+                    <!--<a class="navbar-brand" href="{%url 'index' %}"> #Reemplazar URL por #home.
+                        Insert the file name of your brand image below after the 'img'
+                         <img class="img-responsive" src="/static/bootstrap/img/INSERT IMAGE OF BRAND HERE"> 
+                    </a>-->
                     <a href="#" class="nav__logo">{{ home.name }}</a>
                 </div>
 
@@ -24,7 +28,7 @@
                         <li class="nav__item"><a href="#about" class="nav__link">¿Quienes somos?</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">¿Que hacemos?</a></li>
                         <li class="nav__item"><a href="#portfolio" class="nav__link">Nuestros trabajos</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contactos</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Info</a></li>
                     </ul>
                 </div>
 
@@ -113,7 +117,7 @@
 
             <!-- CONTACT-->
             <section class="contact section" id="contact">
-                <h2 class="section-title">Contactos</h2>
+                <h2 class="section-title">Info</h2>
 
                 <div class="contact__container bd-grid">
                     <div class="contact__info">
@@ -125,9 +129,10 @@
                         <span class="contact__text">+595986104890</span>
                     </div>
 
+                    <h2 class="section-title">Escribenos!</h2>
                     <form action="" class="contact__form">
                         <div class="contact__inputs">
-                            <input placeholder="Name" type="text" class="contact__input">
+                            <input placeholder="Nombre" type="text" class="contact__input">
                             <input type="mail" placeholder="Email" class="contact__input">
                         </div>
     
@@ -135,9 +140,11 @@
     
                         <input type="submit" value="Enviar" class="contact__button">
                     </form>
+
                 </div>
             </section>
         </main>
+        <a href="https://wa.me/595986104890" class="btn-whats" target="_blank"><i class="bx bxl-whatsapp"></i></a>
 
         <footer class="footer section">
             <div class="footer__container bd-grid">
@@ -153,7 +160,7 @@
                         <li><a href="#about" class="footer__link">¿Quienes somos?</a></li>
                         <li><a href="#skills" class="footer__link">¿Que hacemos?</a></li>
                         <li><a href="#portfolio" class="footer__link">Nuestros trabajos</a></li>
-                        <li><a href="#contact" class="footer__link">Contactos</a></li>
+                        <li><a href="#contact" class="footer__link">Info</a></li>
                     </ul>
                 </div>
 
@@ -162,6 +169,7 @@
                     <a href="#" class="footer__social"><i class="bx bxl-facebook"></i></a>
                     <a href="#" class="footer__social"><i class="bx bxl-instagram"></i></a>
                     <a href="#" class="footer__social"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://wa.me/595986104890" class="footer__social"><i class="bx bxl-whatsapp"></i></a>
                     <div class="footer_text">
                         <h6 class="text-center small text-muted">Copyright &copy; KreativA {% now "Y" %}</h6>
                     </div>

@@ -43,6 +43,7 @@ class Skills(models.Model):
     category  = models.ForeignKey(Category, on_delete=models.CASCADE)
     skill_name = models.CharField(max_length=20)
 
+
 #Portfolio
 class Portfolio(models.Model):
     image = models.ImageField(upload_to='portfolio/')
@@ -50,3 +51,14 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return f'Portfolio{self.id}'
+
+
+#Slider
+class Slider(models.Model):
+    pub_date = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now=True)
+    image = models.ImageField(upload_to='slider/')
+    name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name

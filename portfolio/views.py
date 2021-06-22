@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Home, About, Profile, Category, Skills, Portfolio
+from .models import Home, About, Profile, Category, Portfolio, Slider #Skills
 # Create your views here.
 
 def index(request):
@@ -16,12 +16,16 @@ def index(request):
     #Portfolio
     portfolios = Portfolio.objects.all()
 
+    #Slider
+    slider = Slider.objects.all()
+    
     context = {
         'home': home,
         'about': about,
         'profiles': profiles,
         'categories': categories,
-        'portfolios': portfolios
+        'portfolios': portfolios,
+        'sliders': slider
     }
 
     return render(request, 'index.html', context)

@@ -11,9 +11,17 @@
 - Repositorio [GitLab](https://gitlab.com/pescado_rabioso/kreativa) en la rama ==**sid**== agregado
 - Removido IP local
 
+**22/06/2021**
+
+- Integración de función Slider de Bootstrap completa
+- Cambio de nombre en interfaz de administración
+- Cambio de idioma a ES-PY
+
 *TO DO*
+
 - [ ] Agregar contenido multimedia final
 - [ ] Definir servidor email
 - [ ] Agregar vista al campo ==`portfolio__link`== y su link correspondiente
 - [ ] Agregar link de Login para el *Staff*
 - [ ] Ocultar ==SECRET_KEY== en el repo
+- [x] ~~Integrar a Django función Slider de Bootstrap~~

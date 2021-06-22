@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Home, About, Profile, Category, Skills, Portfolio
+from .models import Home, About, Profile, Category, Skills, Portfolio,Slider
 # Register your models here.
 
 #Home
@@ -26,6 +26,10 @@ class CategoryAdmin(admin.ModelAdmin):
     inlines = [
         SkillsInline,
     ]
+@admin.register(Slider)
+class SliderAdmin(admin.ModelAdmin):
+    model = Slider
+    extra = 2
 
 #Portfolio
 admin.site.register(Portfolio)

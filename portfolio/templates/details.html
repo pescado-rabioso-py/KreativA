@@ -1,0 +1,24 @@
+{% load static %}
+{% block content-modal %}
+<!--<div class="modal" tabindex="-1">-->
+	{% for portfolios in portfolios|slice:"1" %}
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <h5 class="modal-title">Modal title</h5>
+		    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"><span class="aria-hidden">&times;</span></button>
+		  </div>
+		  <div class="modal-body">
+		  	<div class="portfolio__img">
+				<img src='{{ portfolios.image.url }}' >
+				<p>{{ portfolios.details }}</p>
+		    </div>
+		  </div>
+		  <div class="modal-footer">
+		    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		    <button type="button" class="btn btn-primary">Save changes</button>
+		  </div>
+		</div>
+	</div>
+	{% endfor %}
+{% endblock %}

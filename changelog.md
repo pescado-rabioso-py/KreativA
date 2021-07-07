@@ -17,11 +17,18 @@
 - Cambio de nombre en interfaz de administración
 - Cambio de idioma a ES-PY
 
+**07/07/2021**
+
+- Scroll Top Button agregado
+- Iconos Animados agregados
+- Funcion Modal de Bootstrap agregada
+
 *TO DO*
 
 - [ ] Agregar contenido multimedia final
 - [ ] Definir servidor email
-- [ ] Agregar vista al campo ==`portfolio__link`== y su link correspondiente
+- [x] ~~Agregar vista al campo ==`portfolio__link`== y su link correspondiente~~
 - [ ] Agregar link de Login para el *Staff*
 - [ ] Ocultar ==SECRET_KEY== en el repo
 - [x] ~~Integrar a Django función Slider de Bootstrap~~
+- [ ] Mostrar en el modal la imagen correspondiente al link

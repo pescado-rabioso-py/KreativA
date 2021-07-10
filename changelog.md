@@ -23,6 +23,13 @@
 - Iconos Animados agregados
 - Funcion Modal de Bootstrap agregada
 
+**09/07/2021**
+
+- Agregado CDN de fuentes Sweet Talk y Bezar
+- Paleta de colores agregados
+- Modificación de tamaños de fuente
+- Inclusión de logo oficial 
+
 *TO DO*
 
 - [ ] Agregar contenido multimedia final

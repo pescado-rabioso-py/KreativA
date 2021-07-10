@@ -1,5 +1,7 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");*/
+@import url('http://fonts.cdnfonts.com/css/bezar');
+@import url('http://fonts.cdnfonts.com/css/sweet-talk');
 
 /*===== VARIABLES CSS =====*/
 :root{
@@ -9,8 +11,8 @@
 
 /*===== Colores =====*/
 :root{
-    --first-color: #5361FF;
-    --white-color: #FAFAFF;
+    --first-color: #FDACBA;
+    --white-color: #FAFBFD;
     --dark-color: #2A3B47;
     --text-color: #697477;
     --transparent-color: #0000;
@@ -18,18 +20,18 @@
 
 /*===== Fuente y tipografia =====*/
 :root{
-    --body-font: 'Montserrat', sans-serif;
+    --body-font: 'Sweet Talk', sans-serif;
     --big-font-size: 6.25rem;
     --h2-font-size: 1.25rem;
-    --normal-font-size: .938rem;
+    --normal-font-size: 1.938rem;
     --small-font-size: .813rem;
 }
 @media screen and (min-width: 768px){
     :root{
         --big-font-size: 10.5rem;
         --h2-font-size: 2rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
+        --normal-font-size: 1.55rem;
+        --small-font-size: 1.875rem;
     }
 }
 
@@ -63,6 +65,7 @@ body{
 }
 h1,h2,p{
     margin: 0;
+    font-size: var(--normal-font-size);
 }
 ul{
     margin: 0;
@@ -180,7 +183,7 @@ img{
 .home{
     position: relative;
     background-color: var(--first-color);
-    overflow: hidden; |
+    overflow: hidden;
 }
 .home__container{
     height: calc(100vh - var(--header-height));
@@ -557,11 +560,12 @@ img{
 /******************************/
 .btn-whats {
     position: fixed;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     line-height: 55px;
     bottom: 30px;
     right: 30px;
+    padding-top: 3px;
     background: #0df053;
     color: #fff;
     border-radius: 50px;

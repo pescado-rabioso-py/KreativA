@@ -30,6 +30,12 @@
 - Modificación de tamaños de fuente
 - Inclusión de logo oficial 
 
+** 29/07/2021**
+- Imágen en modal con su respectivo link terminado
+- Detalles de imágen alineado
+- Text alignments by Bootstrap agregados
+- Instancias innescesarias en modelos removidas
+
 *TO DO*
 
 - [ ] Agregar contenido multimedia final
@@ -38,4 +44,5 @@
 - [ ] Agregar link de Login para el *Staff*
 - [ ] Ocultar ==SECRET_KEY== en el repo
 - [x] ~~Integrar a Django función Slider de Bootstrap~~
-- [ ] Mostrar en el modal la imagen correspondiente al link
+- [x] ~~Mostrar en el modal la imagen correspondiente al link~~
+- [ ] Corregir la vista en dispositivos móviles varios

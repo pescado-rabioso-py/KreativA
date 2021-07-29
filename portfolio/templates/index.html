@@ -17,7 +17,7 @@
             <nav class="nav bd-grid">
                 <div>
                     <a class="navbar-brand" href="{%url 'index' %}">
-                         <img class="img-responsive" src="/static/img/logo_g.png" style="height: 60px">
+                         <img class="img-responsive" src="/static/img/logo_g.png">
                     </a>
                     <!--<a href="#" class="nav__logo">{{ home.name }}</a>-->
                 </div>
@@ -132,11 +132,11 @@
                 <h2 class="section-title">Nuestros trabajos</h2>
                 <div class="portfolio__container bd-grid">
                     <!-- Bootstrap Modal-->
-                    {% for portfolio in portfolios %}
+                    {% for portfolio in portfolio %}
                     <div class="portfolio__img">
                         <img src="{{ portfolio.image.url }}" alt="">
                         <div class="portfolio__link">
-                            <button onclick="abrir_modal('{{ portfolio.slug }}')" class="btn portfolio__link-name">{{ portfolio.titulo }}</button>
+                            <a onclick="abrir_modal('{{ portfolio.slug }}')" class="btn portfolio__link-name">{{ portfolio.titulo }}</a>
                         </div>
                     </div>
                     {% endfor %}
@@ -144,8 +144,6 @@
             </section>
             
             <div class="modal fade" id="modalDetails" role="dialog" tabindex="-1">
-              {% block content-modal %}
-              {% endblock %}
             </div>
 
 
@@ -216,9 +214,10 @@
             <!-- Scroll Top Button -->
             <div class="padre">
               <button value="top" id="to-top">
-                <a href="#" href="#"><i class='bx bx-chevrons-up bx-flashing-hover' ></i></a>
+                <a href="#"><i class='bx bx-chevrons-up bx-flashing-hover' ></i></a>
               </button>
             </div>
+            <p class="sm-text">make with &hearts;</p>
         </footer>
 
         <!-- SCROLL REVEAL -->
